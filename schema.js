@@ -44,10 +44,10 @@ const MetaType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
     fields: {
-        data: {
+        search: {
             type: DataResponseType,
             resolve(parent, args) {
-                return axios.get("https://api.giphy.com/v1/gifs/search?api_key=t4HfXGHIt2uMBoaMk25K5LToS1pLu7E8&q=Synths&limit=2&offset=0&rating=G&lang=en")
+                return axios.get("https://api.giphy.com/v1/gifs/search?api_key=t4HfXGHIt2uMBoaMk25K5LToS1pLu7E8&q=Synths&limit=20&offset=0&rating=G&lang=en")
                             .then(res => res.data);
             }
         }

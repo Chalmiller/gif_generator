@@ -30,10 +30,10 @@ class Gifs extends Component {
                             console.log(data);
                             return <React.Fragment>
                                 {
-                                    // data.data.map(gif => (
-                                    //     <GifItem key={gif.id} gif={gif} />
-                                    //     )
-                                    // )
+                                    data.search.data.map(gif => (
+                                        <GifItem key={gif.id} gif={gif} />
+                                        )
+                                    )
                                 }
                             </React.Fragment>
                         }
